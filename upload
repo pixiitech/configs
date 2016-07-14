@@ -1,0 +1,9 @@
+cp ~/.bash_aliases ~/configs/bash_aliases
+cp ~/.bashrc ~/configs/bashrc
+cp ~/.bash_profile ~/configs/bash_profile
+cp ~/.vimrc ~/configs/vimrc
+cd ~/configs
+git add .
+git commit -m "Changes"
+git push origin master
+cd -
