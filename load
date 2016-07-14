@@ -6,3 +6,4 @@ cp ~/configs/bash_profile ~/.bash_profile
 cp ~/configs/vimrc ~/.vimrc
 cd -
 source ~/.bash_profile
+source ~/.bash_aliases
