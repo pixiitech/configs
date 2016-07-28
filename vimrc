@@ -8,6 +8,7 @@ set number
 set splitright splitbelow
 set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 :color elflord
+autocmd BufWritePre * %s/\s\+$//e
 "=============== Vundle, start =============== 
 
 set nocompatible              " be iMproved, required
