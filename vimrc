@@ -7,9 +7,10 @@ cabbrev nt NERDTree
 set number
 set splitright splitbelow
 set expandtab shiftwidth=2 tabstop=2 softtabstop=2
+set backspace=indent,eol,start
 :color elflord
 autocmd BufWritePre * %s/\s\+$//e
-"=============== Vundle, start =============== 
+"=============== Vundle, start ===============
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -61,4 +62,4 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"=============== Vundle, end =============== 
+"=============== Vundle, end ===============
