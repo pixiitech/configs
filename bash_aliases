@@ -13,4 +13,5 @@ alias l5='cd ~/Projects/line5'
 alias vim='vim -c :NERDTree'
 alias prune='for a in $(git branch --merged | sed "s/..//;/master/d"); do echo branch_name: $a; git branch -d "$a"; done'
 alias ss='rails s --binding 127.0.0.1'
+alias fn='find . -name'
 source ~/.local_aliases

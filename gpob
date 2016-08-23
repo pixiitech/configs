@@ -8,8 +8,6 @@ if [ "$GIT_BRANCH" = "master" ]; then
   echo "gpob: cannot be used with master for safety reasons"
 elif [ "$GIT_BRANCH" = "" ]; then
   echo "gpob: cannot be used without a branch name"
-elif [ ${#GIT_BRANCH} -eq 40 ]; then
-  echo "gpob: no branch!"
 else
   git push -v -f origin $GIT_BRANCH
 fi
