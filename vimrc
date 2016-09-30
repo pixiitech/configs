@@ -10,6 +10,7 @@ set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
 :color elflord
 autocmd BufWritePre * %s/\s\+$//e
+:set ignorecase
 "=============== Vundle, start ===============
 
 set nocompatible              " be iMproved, required
