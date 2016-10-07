@@ -6,6 +6,7 @@ alias gphm="git push heroku master"
 alias gpom="git push origin master"
 alias gpgm="git push origin Gregs"
 alias gco="git checkout"
+alias gcob="git checkout -b"
 alias gpr="git pull -r origin master"
 alias teapot="echo I'm a teapot!"
 alias gedit='setsid gedit'
