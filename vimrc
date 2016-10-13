@@ -11,6 +11,11 @@ set backspace=indent,eol,start
 :color elflord
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 "=============== Vundle, start ===============
 
 set nocompatible              " be iMproved, required
@@ -32,6 +37,8 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdtree.git'
+Plugin 'thoughtbot/vim-rspec'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
