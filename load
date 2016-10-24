@@ -2,6 +2,7 @@ cd ~/configs
 git pull origin master
 cp ~/configs/bash_aliases ~/.bash_aliases
 cp ~/configs/bashrc ~/.bashrc
+cp ~/configs/zshrc ~/.zshrc
 cp ~/configs/bash_profile ~/.bash_profile
 cp ~/configs/vimrc ~/.vimrc
 cd -
