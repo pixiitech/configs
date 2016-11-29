@@ -1,0 +1,3 @@
+git pull -r origin master
+rake db:migrate
+bundle install

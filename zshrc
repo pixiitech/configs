@@ -7,7 +7,7 @@ export ZSH=/Users/greg/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="afowler"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colorize colored-man-pages emoji rails ruby history zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,14 +90,16 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Path for custom scripts
 export PATH="$PATH:$HOME/configs:$HOME/Configs"
 
-source ~/.rvm/scripts/rvm
+# source ~/.rvm/scripts/rvm
 
 cd ~/Projects
 source ~/.gitprompt
 
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin/:$PATH"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin/:/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
