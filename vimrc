@@ -4,11 +4,15 @@ filetype indent on
 :map! jk <ESC>
 :map! <F5> :ls<cr>
 cabbrev nt NERDTree
+cabbrev ct ConqueTerm
+cabbrev cts ConqueTermSplit bash
+cabbrev ctv ConqueTermVSplit bash
 set number
 set splitright splitbelow
 set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
-:color elflord
+set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+:color monokai
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
 " RSpec.vim mappings
@@ -36,8 +40,10 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'wkentaro/conque.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
