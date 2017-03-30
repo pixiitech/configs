@@ -7,6 +7,7 @@ cabbrev nt NERDTree
 cabbrev ct ConqueTerm
 cabbrev cts ConqueTermSplit bash
 cabbrev ctv ConqueTermVSplit bash
+set ruler
 set number
 set splitright splitbelow
 set expandtab shiftwidth=2 tabstop=2 softtabstop=2
