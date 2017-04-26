@@ -4,9 +4,11 @@ filetype indent on
 :map! jk <ESC>
 :map! <F5> :ls<cr>
 cabbrev nt NERDTree
-cabbrev ct ConqueTerm
+cabbrev ct ConqueTerm bash
 cabbrev cts ConqueTermSplit bash
 cabbrev ctv ConqueTermVSplit bash
+cabbrev ctr ConqueTerm rails c
+cabbrev rs split <bar> q <bar> vs <bar> q
 set ruler
 set number
 set splitright splitbelow
