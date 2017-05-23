@@ -1,3 +1,4 @@
+rm -rf ~/Projects/super_test
 mkdir ~/Projects/super_test
 git clone . ~/Projects/super_test
 cp config/application.yml ~/Projects/super_test/config/
