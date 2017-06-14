@@ -18,6 +18,7 @@ set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 :color monokai
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
+let g:rspec_command = "!bundle exec rspec {spec}"
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -49,6 +50,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'wkentaro/conque.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-scripts/dbext.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
