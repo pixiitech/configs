@@ -1,1 +1,1 @@
-grep -RIi --exclude=*.log $1 *
+egrep --exclude='*.log' -RIi $1 *
