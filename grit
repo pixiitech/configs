@@ -1,1 +1,1 @@
-egrep --exclude='*.log' -RIi $1 *
+egrep -RIi --exclude-dir=coverage --exclude='*.log' $1 *

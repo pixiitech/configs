@@ -17,3 +17,5 @@ alias fn='find . -name'
 alias fixtestdb='rails db:environment:set RAILS_ENV=test; rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test'
 source ~/.local_aliases
 alias killthepostmaster='rm ~/Library/Application Support/Postgres/var-9.6/postmaster.pid'
+alias wipit="git add .; gc -m 'WIP commit (via wipit)';"
+alias unwipit="git reset HEAD^"
