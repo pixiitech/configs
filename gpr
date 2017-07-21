@@ -1,4 +1,15 @@
-git pull -r origin master
-rake db:migrate
-rake db:migrate RAILS_ENV=test
-bundle install
+GIT_DIR=`git rev-parse --git-dir 2>/dev/null`
+if [ -z "$GIT_DIR" ]; then
+  echo "gpob: could not find git dir"
+  return 0
+fi
+GIT_BRANCH=`cat $GIT_DIR/HEAD | cut -c 17-`
+if [ "$GIT_BRANCH" = "master" ]; then
+  git pull -r origin master
+  rake db:migrate
+  rake db:migrate RAILS_ENV=test
+  bundle install
+  git checkout .
+else
+  echo "gpr: please checkout master first"
+fi
