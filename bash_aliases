@@ -19,3 +19,5 @@ source ~/.local_aliases
 alias killthepostmaster='rm ~/Library/Application Support/Postgres/var-9.6/postmaster.pid'
 alias wipit="git add .; gc -m 'WIP commit (via wipit)';"
 alias unwipit="git reset HEAD^"
+alias hrc='heroku run console -a'
+alias tmux='~/Downloads/tmux-2.5/tmux'

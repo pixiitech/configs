@@ -3,6 +3,7 @@ cp ~/.bashrc ~/configs/bashrc
 cp ~/.zshrc ~/configs/zshrc
 cp ~/.bash_profile ~/configs/bash_profile
 cp ~/.vimrc ~/configs/vimrc
+cp ~/.tmux.conf ~/configs/tmux.conf
 cd ~/configs
 git add .
 git commit -m "Changes"

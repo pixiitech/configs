@@ -5,6 +5,7 @@ cp ~/configs/bashrc ~/.bashrc
 cp ~/configs/zshrc ~/.zshrc
 cp ~/configs/bash_profile ~/.bash_profile
 cp ~/configs/vimrc ~/.vimrc
+cp ~/configs/tmux.conf ~/.tmux.conf
 cd -
 source ~/.bash_profile
 source ~/.bash_aliases
