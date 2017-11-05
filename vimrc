@@ -24,6 +24,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+autocmd QuickFixCmdPost *grep* cwindow
 "=============== Vundle, start ===============
 
 set nocompatible              " be iMproved, required
