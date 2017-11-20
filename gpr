@@ -6,8 +6,8 @@ fi
 GIT_BRANCH=`cat $GIT_DIR/HEAD | cut -c 17-`
 if [ "$GIT_BRANCH" = "master" ]; then
   git pull -r origin master
-  rake db:migrate
-  rake db:migrate RAILS_ENV=test
+  bundle exec rake db:migrate
+  bundle exec rake db:migrate RAILS_ENV=test
   bundle install
   git checkout .
 else
