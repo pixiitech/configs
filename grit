@@ -1,1 +1,1 @@
-egrep -RIi --exclude-dir={coverage,public,vendor} --exclude='*.log' $1 *
+egrep -RIi --exclude-dir={coverage,public,vendor,tmp} --exclude='*.log' $1 *
