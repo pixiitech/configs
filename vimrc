@@ -9,6 +9,7 @@ cabbrev cts ConqueTermSplit bash
 cabbrev ctv ConqueTermVSplit bash
 cabbrev ctr ConqueTerm rails c
 cabbrev rs split <bar> q <bar> vs <bar> q
+cabbrev ea EasyAlign
 set ruler
 set number
 set splitright splitbelow
@@ -53,6 +54,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'junegunn/vim-easy-align'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
