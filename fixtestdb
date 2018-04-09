@@ -1,0 +1,10 @@
+psql -c "DROP DATABASE line5_test"
+psql -c "DROP DATABASE line5_test2"
+psql -c "DROP DATABASE line5_test3"
+psql -c "DROP DATABASE line5_test4"
+psql -c "DROP DATABASE line5_test5"
+psql -c "DROP DATABASE line5_test6"
+psql -c "DROP DATABASE line5_test7"
+psql -c "DROP DATABASE line5_test8"
+rake parallel:create
+rake parallel:prepare

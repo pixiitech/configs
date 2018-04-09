@@ -1,0 +1,9 @@
+for (( i=1; i<=8; i++))
+  do
+    if [ "$i" = "1" ]; then
+      j=''
+    else
+      j="$i"
+    fi
+    psql -d "line5_test$j" -c "alter table $1 rename column $2 to $3;"
+  done
