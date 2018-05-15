@@ -55,6 +55,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'rhysd/vim-fixjson'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
