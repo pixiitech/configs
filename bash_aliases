@@ -21,4 +21,4 @@ alias unwipit="git reset HEAD^"
 alias hrc='heroku run console -a'
 alias tmux='~/Downloads/tmux-2.5/tmux'
 alias bex='bundle exec'
-alias dc='docker compose'
+alias dc='docker-compose'
