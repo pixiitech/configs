@@ -6,5 +6,5 @@ psql -c "DROP DATABASE line5_test5"
 psql -c "DROP DATABASE line5_test6"
 psql -c "DROP DATABASE line5_test7"
 psql -c "DROP DATABASE line5_test8"
-rake parallel:create
-rake parallel:prepare
+bundle exec rake parallel:create
+bundle exec rake parallel:prepare
