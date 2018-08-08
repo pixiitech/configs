@@ -56,6 +56,7 @@ Plugin 'vim-scripts/dbext.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-fixjson'
+Plugin 'w0rp/ale'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -89,3 +90,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "=============== Vundle, end ===============
+"" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
