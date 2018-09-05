@@ -1,4 +1,7 @@
-for (( i=1; i<=8; i++))
+# fixtestcolumn
+# usage: fixtestcolumn <table_name> <old_column> <new_column>
+
+for (( i=1; i<=8; i++ ))
   do
     if [ "$i" = "1" ]; then
       j=''

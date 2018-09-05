@@ -4,4 +4,4 @@ git clone . ~/Projects/super_test
 cp config/application.yml ~/Projects/super_test/config/
 
 cd ~/Projects/super_test
-rake && cd - && rm -rf ~/Projects/super_test && echo 'supertest: Successful!'
+bundle exec rake && cd - && rm -rf ~/Projects/super_test && echo 'supertest: Successful!'
