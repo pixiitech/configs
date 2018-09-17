@@ -8,7 +8,6 @@ cabbrev ct ConqueTerm bash
 cabbrev cts ConqueTermSplit bash
 cabbrev ctv ConqueTermVSplit bash
 cabbrev ctr ConqueTerm rails c
-cabbrev rs split <bar> q <bar> vs <bar> q
 cabbrev ea EasyAlign
 set ruler
 set number
@@ -26,6 +25,10 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 autocmd QuickFixCmdPost *grep* cwindow
+function SwitchBuffer()
+ b#
+endfunction
+nmap <Tab> :call SwitchBuffer()<CR>
 "=============== Vundle, start ===============
 
 set nocompatible              " be iMproved, required
@@ -57,6 +60,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-fixjson'
 Plugin 'w0rp/ale'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
