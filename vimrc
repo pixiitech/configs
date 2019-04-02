@@ -9,6 +9,7 @@ cabbrev cts ConqueTermSplit bash
 cabbrev ctv ConqueTermVSplit bash
 cabbrev ctr ConqueTerm rails c
 cabbrev ea EasyAlign
+cabbrev hidesigns sign unplace *
 set ruler
 set number
 set splitright splitbelow
@@ -24,11 +25,14 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+map cp :setlocal nonumber<CR> :sign unplace *<CR>
 autocmd QuickFixCmdPost *grep* cwindow
 function SwitchBuffer()
  b#
 endfunction
 nmap <Tab> :call SwitchBuffer()<CR>
+:command Frt :normal gg O# frozen_string_literal: true<CR><ESC>x
+:map <Space>frt :Frt
 "=============== Vundle, start ===============
 
 set nocompatible              " be iMproved, required
@@ -59,7 +63,7 @@ Plugin 'vim-scripts/dbext.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-fixjson'
-Plugin 'w0rp/ale'
+" Plugin 'w0rp/ale'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 
