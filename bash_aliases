@@ -22,4 +22,7 @@ alias fixschema='ruby ~/configs/fixschemaver.rb'
 alias cuke="bex cucumber features/quote_wizard && bex rake parallel:features\['admin|customer|shared|dealer'\]"
 alias cukeparallel="bex rake parallel:features\['admin|customer|shared|dealer'\]"
 alias echoserver="ruby ~/Projects/echo/lib/app.rb"
+alias jrdebug="JRUBY_OPTS='-Xcext.enabled=true --debug'"
+alias bpr="cd ~/Projects/bumper"
+alias bprss='rails server --binding=127.0.0.1 --port=3001'
 source ~/.local_aliases

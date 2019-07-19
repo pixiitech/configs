@@ -16,7 +16,7 @@ set splitright splitbelow
 set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
-:color monokai
+set nofoldenable
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
 let g:rspec_command = "!bundle exec rspec {spec}"
@@ -66,6 +66,7 @@ Plugin 'rhysd/vim-fixjson'
 " Plugin 'w0rp/ale'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'dracula/vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -107,3 +108,5 @@ packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
+" Dracula must be set after plugin install
+:color dracula
