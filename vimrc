@@ -17,6 +17,7 @@ set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 set nofoldenable
+set re=1 "use old regex syntax https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
 let g:rspec_command = "!bundle exec rspec {spec}"
@@ -26,6 +27,10 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map cp :setlocal nonumber<CR> :sign unplace *<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 autocmd QuickFixCmdPost *grep* cwindow
 function SwitchBuffer()
  b#
@@ -54,19 +59,22 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-cucumber'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'wkentaro/conque.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-scripts/dbext.vim'
-Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rhysd/vim-fixjson'
 " Plugin 'w0rp/ale'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
+" Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plugin 'junegunn/fzf.vim'
 Plugin 'dracula/vim'
+" Plugin 'airblade/vim-gitgutter'
+" Plugin 'ryanoasis/vim-devicons'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.

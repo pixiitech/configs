@@ -6,6 +6,7 @@ alias gphm="git push heroku master"
 alias gpom="git push origin master"
 alias gco="git checkout"
 alias gcob="git checkout -b"
+alias gcp="git cherry-pick"
 alias l5='cd ~/Projects/line5'
 alias prune='for a in $(git branch --merged | sed "s/..//;/master/d"); do echo branch_name: $a; git branch -d "$a"; done'
 alias ss='rails server --binding 127.0.0.1'
