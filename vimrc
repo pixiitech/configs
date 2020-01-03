@@ -10,6 +10,7 @@ cabbrev ctv ConqueTermVSplit bash
 cabbrev ctr ConqueTerm rails c
 cabbrev ea EasyAlign
 cabbrev hidesigns sign unplace *
+cabbrev vrc e ~/.vimrc
 set ruler
 set number
 set splitright splitbelow
@@ -18,6 +19,7 @@ set backspace=indent,eol,start
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 set nofoldenable
 set re=1 "use old regex syntax https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+" set clipboard=unnamedplus "https://stackoverflow.com/questions/21810344/how-to-copy-something-from-vim-editor-to-shell-command-line
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
 let g:rspec_command = "!bundle exec rspec {spec}"
@@ -27,6 +29,7 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map cp :setlocal nonumber<CR> :sign unplace *<CR>
+map <Leader>e :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -73,8 +76,10 @@ Plugin 'rhysd/vim-fixjson'
 " Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plugin 'junegunn/fzf.vim'
 Plugin 'dracula/vim'
-" Plugin 'airblade/vim-gitgutter'
-" Plugin 'ryanoasis/vim-devicons'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'jparise/vim-graphql'
+Plugin 'junegunn/vim-emoji'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -118,3 +123,8 @@ packloadall
 silent! helptags ALL
 " Dracula must be set after plugin install
 :color dracula
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
+set completefunc=emoji#complete
