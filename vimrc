@@ -20,8 +20,9 @@ set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 set nofoldenable
 set re=1 "use old regex syntax https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
 " set clipboard=unnamedplus "https://stackoverflow.com/questions/21810344/how-to-copy-something-from-vim-editor-to-shell-command-line
-autocmd BufWritePre * %s/\s\+$//e
+" autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
+set mouse+=a
 let g:rspec_command = "!bundle exec rspec {spec}"
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -30,6 +31,13 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map cp :setlocal nonumber<CR> :sign unplace *<CR>
 map <Leader>e :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
+
+nmap <Leader>c "+yy
+vmap <Leader>c "+y
+nmap <Leader>v "+p
+" nmap <C-c> "+yy
+" vmap <C-c> "+y
+" nmap <C-v> "+p
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
