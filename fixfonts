@@ -1,0 +1,4 @@
+sudo atsutil databases -remove
+echo 'Will be restarting pc now... (use Ctrl+C to stop)'
+pause
+sudo shutdown -r now

@@ -28,6 +28,7 @@ alias jrdebug="JRUBY_OPTS='-Xcext.enabled=true --debug'"
 alias bpr="cd ~/Projects/bumper"
 alias sfsv="cd ~/Projects/self-service"
 alias bprss='rails server --binding=127.0.0.1 --port=3001'
+alias self-service='rails server --binding=127.0.0.1 --port=3002'
 alias cucumber='ulimit -n 1024; bundle exec cucumber'
 alias rspec='ulimit -n 1024; bundle exec rspec'
 source ~/.local_aliases
