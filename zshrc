@@ -109,3 +109,5 @@ if [ -f '/Users/greg/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/greg/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/greg/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
