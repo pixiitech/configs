@@ -137,12 +137,4 @@ let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 set completefunc=emoji#complete
 
-if getcwd() == '/Users/greg/Projects/bumper'
-  :color monokai
-elseif getcwd() == '/Users/greg/Projects/line5'
-  :color dracula
-elseif getcwd() == '/Users/greg/Projects/self-service'
-  :color slate
-else
-  :color elflord
-endif
+:color dracula
