@@ -23,18 +23,31 @@ set re=1 "use old regex syntax https://stackoverflow.com/questions/16902317/vim-
 " autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
 set mouse+=a
+" set completefunc=syntaxcomplete#Complete
 let g:rspec_command = "!bundle exec rspec {spec}"
+
+function! OpenCurrentWithExt(ext)
+  execute "e ".expand("%:h")."/".split(expand("%:t"), "\\.")[0].a:ext
+endfunction
+
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>m :! bundle exec rails test %<CR>
 map cp :setlocal nonumber<CR> :sign unplace *<CR>
 map <Leader>e :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
+" map <Leader>j :%!python -m json.tool
+map <Leader>r :! rubocop %<CR>
+map <Leader>y :! yarn eslint %<CR>
+map <Leader>g :! git add %<CR>
+map <Leader>i :call OpenCurrentWithExt(".scss")<CR>
+map <Leader>j :call OpenCurrentWithExt(".jsx")<CR>
 
 nmap <Leader>c "+yy
 vmap <Leader>c "+y
-nmap <Leader>v "+p
+" nmap <Leader>v "+p
 " nmap <C-c> "+yy
 " vmap <C-c> "+y
 " nmap <C-v> "+p
@@ -48,6 +61,7 @@ function SwitchBuffer()
 endfunction
 nmap <Tab> :call SwitchBuffer()<CR>
 :command Frt :normal gg O# frozen_string_literal: true<CR><ESC>x
+:command -nargs=+ Ecomponent :e app/javascript/components/<args>/<args>.jsx
 :map <Space>frt :Frt
 "=============== Vundle, start ===============
 
@@ -89,6 +103,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'jparise/vim-graphql'
 Plugin 'junegunn/vim-emoji'
+Plugin 'sunaku/vim-ruby-minitest'
+Plugin 'mlaursen/vim-react-snippets'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -135,6 +151,11 @@ let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
 let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
 let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
-set completefunc=emoji#complete
 
-:color dracula
+if getcwd() == '/Users/gregory/Projects/clora-search'
+  :color elflord
+elseif getcwd() == '/Users/gregory/Projects/clora-fresh'
+  :color dracula
+else
+  :color monokai
+endif

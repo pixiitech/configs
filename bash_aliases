@@ -1,6 +1,7 @@
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
+alias rc="rails console"
 alias grao="git remote add origin"
 alias gphm="git push heroku master"
 alias gpom="git push origin master"
@@ -14,7 +15,7 @@ alias ss='rails server --binding 0.0.0.0'
 alias fn='find . -name'
 alias wipit="git add .; gc -m 'WIP commit (via wipit)';"
 alias unwipit="git reset HEAD^"
-alias hrc='heroku run rails console -a'
+alias hrc='heroku run "pry -r ./config/environment" -a'
 alias tmux='~/Downloads/tmux-2.5/tmux'
 alias bex='bundle exec'
 alias dc='docker-compose'
@@ -27,8 +28,11 @@ alias echoserver="ruby ~/Projects/echo/lib/app.rb"
 alias jrdebug="JRUBY_OPTS='-Xcext.enabled=true --debug'"
 alias bpr="cd ~/Projects/bumper"
 alias sfsv="cd ~/Projects/self-service"
-alias bprss='rails server --binding=127.0.0.1 --port=3001'
-alias self-service='rails server --binding=127.0.0.1 --port=3002'
+alias ss2='rails server --binding=127.0.0.1 --port=3001'
+alias ss3='rails server --binding=127.0.0.1 --port=3002'
 alias cucumber='ulimit -n 1024; bundle exec cucumber'
 alias rspec='ulimit -n 1024; bundle exec rspec'
+alias wpc='RAILS_ENV=test ./bin/rails webpacker:compile'
+alias fms='foreman start -f Procfile.dev'
+alias rake='bundle exec rake'
 source ~/.local_aliases
