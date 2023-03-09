@@ -60,6 +60,7 @@ function SwitchBuffer()
  b#
 endfunction
 nmap <Tab> :call SwitchBuffer()<CR>
+:command Smash :'<,'>s/^/*<Space>/g 
 :command Frt :normal gg O# frozen_string_literal: true<CR><ESC>x
 :command -nargs=+ Ecomponent :e app/javascript/components/<args>/<args>.jsx
 :map <Space>frt :Frt

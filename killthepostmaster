@@ -1,0 +1,2 @@
+rm /usr/local/var/postgresql@10/postmaster.pid
+brew services start postgresql@10

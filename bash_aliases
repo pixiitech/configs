@@ -32,7 +32,7 @@ alias ss2='rails server --binding=127.0.0.1 --port=3001'
 alias ss3='rails server --binding=127.0.0.1 --port=3002'
 alias cucumber='ulimit -n 1024; bundle exec cucumber'
 alias rspec='ulimit -n 1024; bundle exec rspec'
-alias wpc='RAILS_ENV=test ./bin/rails webpacker:compile'
+alias wpc='NODE_ENV=test RAILS_ENV=test ./bin/rails webpacker:compile'
 alias fms='foreman start -f Procfile.dev'
 alias rake='bundle exec rake'
 source ~/.local_aliases
