@@ -142,5 +142,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+export OPENAI_API_KEY="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"
 
 source /Users/gregory/.config/broot/launcher/bash/br

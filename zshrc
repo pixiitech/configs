@@ -100,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(rbenv init - )"
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/redis@3.2/bin:$PATH"

@@ -1,7 +1,7 @@
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
-alias rc="rails console"
+alias rc="bundle exec pry -r ./config/environment"
 alias grao="git remote add origin"
 alias gphm="git push heroku master"
 alias gpom="git push origin master"
@@ -32,7 +32,7 @@ alias ss2='rails server --binding=127.0.0.1 --port=3001'
 alias ss3='rails server --binding=127.0.0.1 --port=3002'
 alias cucumber='ulimit -n 1024; bundle exec cucumber'
 alias rspec='ulimit -n 1024; bundle exec rspec'
-alias wpc='NODE_ENV=test RAILS_ENV=test ./bin/rails webpacker:compile'
+alias wpc='NODE_ENV=test RAILS_ENV=test ./bin/rails webpacker:clobber; NODE_ENV=test RAILS_ENV=test ./bin/rails webpacker:compile'
 alias fms='foreman start -f Procfile.dev'
 alias rake='bundle exec rake'
 source ~/.local_aliases
