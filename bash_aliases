@@ -35,4 +35,5 @@ alias rspec='ulimit -n 1024; bundle exec rspec'
 alias wpc='NODE_ENV=test RAILS_ENV=test ./bin/rails webpacker:clobber; NODE_ENV=test RAILS_ENV=test ./bin/rails webpacker:compile'
 alias fms='foreman start -f Procfile.dev'
 alias rake='bundle exec rake'
+alias gp="~/configs/gp"
 source ~/.local_aliases

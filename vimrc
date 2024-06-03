@@ -11,6 +11,7 @@ cabbrev ctr ConqueTerm rails c
 cabbrev ea EasyAlign
 cabbrev hidesigns sign unplace *
 cabbrev vrc e ~/.vimrc
+cabbrev Wq wq
 set ruler
 set number
 set splitright splitbelow
