@@ -107,6 +107,7 @@ Plugin 'jparise/vim-graphql'
 Plugin 'junegunn/vim-emoji'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'mlaursen/vim-react-snippets'
+Plugin 'crusoexia/vim-monokai'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
