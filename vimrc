@@ -19,7 +19,7 @@ set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 set nofoldenable
-set re=1 "use old regex syntax https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+set re=0 "use old regex syntax https://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
 " set clipboard=unnamedplus "https://stackoverflow.com/questions/21810344/how-to-copy-something-from-vim-editor-to-shell-command-line
 " autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
@@ -108,6 +108,7 @@ Plugin 'junegunn/vim-emoji'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'mlaursen/vim-react-snippets'
 Plugin 'crusoexia/vim-monokai'
+" Plugin 'leafgarland/typescript-vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -155,10 +156,10 @@ let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
 let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
-if getcwd() == '/Users/gregory/Projects/clora-search'
-  :color elflord
-elseif getcwd() == '/Users/gregory/Projects/clora-fresh'
+" if getcwd() == '/Users/gregory/Projects/clora-search'
+  " :color elflord
+" elseif getcwd() == '/Users/gregory/Projects/clora-fresh'
   :color dracula
-else
-  :color monokai
-endif
+" else
+  " :color monokai
+" endif

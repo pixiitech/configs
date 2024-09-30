@@ -139,3 +139,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 source /Users/gregory/.config/broot/launcher/bash/br
+
+# bun completions
+[ -s "/Users/gregory/.bun/_bun" ] && source "/Users/gregory/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
