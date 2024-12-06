@@ -143,6 +143,10 @@ source /Users/gregory/.config/broot/launcher/bash/br
 # bun completions
 [ -s "/Users/gregory/.bun/_bun" ] && source "/Users/gregory/.bun/_bun"
 
+export FREEDESKTOP_MIME_TYPES_PATH="$HOME/freedesktop.org.xml"
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/bin/vim:$PATH"

@@ -108,6 +108,7 @@ Plugin 'junegunn/vim-emoji'
 Plugin 'sunaku/vim-ruby-minitest'
 Plugin 'mlaursen/vim-react-snippets'
 Plugin 'crusoexia/vim-monokai'
+Plugin 'ycm-core/YouCompleteMe'
 " Plugin 'leafgarland/typescript-vim'
 
 " The following are examples of different formats supported.
