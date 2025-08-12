@@ -1,1 +1,1 @@
-egrep -RIi --exclude-dir={coverage,public,vendor,tmp,node_modules} --exclude='*.log' $1 *
+egrep -RIi --exclude-dir={coverage,public,vendor,tmp,node_modules,build} --exclude='*.log' --exclude='*.svg' $1 *

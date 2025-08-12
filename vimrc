@@ -31,22 +31,43 @@ function! OpenCurrentWithExt(ext)
   execute "e ".expand("%:h")."/".split(expand("%:t"), "\\.")[0].a:ext
 endfunction
 
+function! RunSpecsInCurrent()
+  if expand("%:f")[strlen(expand("%:f"))-13:strlen(expand("%:f"))] == 'unit.spec.jsx'
+    execute "! npm test %"
+  elseif expand("%:f")[strlen(expand("%:f"))-8:strlen(expand("%:f"))] == '_spec.rb'
+    call RunCurrentSpecFile()
+  else
+    execute "! yarn cy:run --spec % --headed"
+  end
+endfunction
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
+
+map <Leader>t :call RunSpecsInCurrent()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>m :! bundle exec rails test %<CR>
+" map <Leader>m :! bundle exec rails test %<CR>
 map cp :setlocal nonumber<CR> :sign unplace *<CR>
 map <Leader>e :%s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g<CR>
 " map <Leader>j :%!python -m json.tool
 map <Leader>r :! rubocop %<CR>
 map <Leader>y :! yarn eslint %<CR>
+
+map <Leader>h :! yarn cy:run --spec % --browser firefox<CR>
 map <Leader>g :! git add %<CR>
 map <Leader>i :call OpenCurrentWithExt(".scss")<CR>
 map <Leader>j :call OpenCurrentWithExt(".jsx")<CR>
+if getcwd() == '/Users/gregory/Projects/vets-api'
+  map <Leader>f :e modules/accredited_representative_portal/
+elseif getcwd() == '/Users/gregory/Projects/vets-website'
+  map <Leader>f :e src/applications/accredited-representative-portal/
+end
+map <Leader>c :e modules/accredited_representative_portal/app/controllers/accredited_representative_portal/v0/
+map <Leader>m :e modules/accredited_representative_portal/app/models/accredited_representative_portal/
+map <Leader>v :e spec/support/vcr_cassettes/lighthouse/benefits_claims/
+map <Leader>u :e src/applications/representative-form-upload/
 
-nmap <Leader>c "+yy
+" nmap <Leader>c "+yy
 vmap <Leader>c "+y
 " nmap <Leader>v "+p
 " nmap <C-c> "+yy
@@ -72,6 +93,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set path+=~/Projects/vets-api/modules/accredited_representative_portal
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -157,10 +179,11 @@ let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
 let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
-" if getcwd() == '/Users/gregory/Projects/clora-search'
-  " :color elflord
-" elseif getcwd() == '/Users/gregory/Projects/clora-fresh'
+let g:ycm_auto_hover = ''
+if getcwd() == '/Users/gregory/Projects/vets-api'
   :color dracula
-" else
-  " :color monokai
-" endif
+elseif getcwd() == '/Users/gregory/Projects/vets-website'
+  :color sonokai
+else
+  :color sonokai
+endif
