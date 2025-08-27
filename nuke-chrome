@@ -1,4 +1,0 @@
-sudo rm -rf '/Applications/Google Chrome'
-sudo hdiutil attach ~/Downloads/google-chrome-72-0-3626-121.dmg
-sudo cp -rf '/Volumes/Google Chrome/Google Chrome.app' '/Applications'
-sudo hdiutil detach '/Volumes/Google Chrome/'
